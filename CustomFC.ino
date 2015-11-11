@@ -215,9 +215,9 @@ void loop()
   }
 
   if (now - last_print >= 100000 /* 100ms : 10hz */) {
-    //hal.console->printf_P(PSTR("P:%4.1f  R:%4.1f Y:%4.1f rate=%.1f\n"),pitch,roll,yaw,(1.0e6*counter)/(now-last_print));
+    hal.console->printf_P(PSTR("P:%4.1f  R:%4.1f Y:%4.1f rate=%.1f\n"),pitch,roll,yaw,(1.0e6*counter)/(now-last_print));
     //hal.console->printf_P(PSTR("THR %.0f YAW %.0f PIT %.0f ROLL %.0f\r\n"),rcthr, rcyaw, rcpit, rcroll);
-    hal.console->printf_P(PSTR("F %.2f R %.2f B %.2f L %.2f \r\n"),pitch_stab_output, -roll_stab_output, -pitch_stab_output, roll_stab_output);
+    //hal.console->printf_P(PSTR("F %.2f R %.2f B %.2f L %.2f \r\n"),pitch_stab_output, -roll_stab_output, -pitch_stab_output, roll_stab_output);
     last_print = now;
     counter = 0;
   }
